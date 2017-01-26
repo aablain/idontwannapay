@@ -24,10 +24,10 @@ export class ProjectsListComponent implements OnInit {
       this.router.navigate(['specific-project', clickedProject.$key]);
     }
 
-    // filterByArtist: string = "allArtists";
-    //
-    // onChange(optionFromMenu) {
-    //   this.filterByArtist = optionFromMenu;
-    // }
+    filterByType: string = "allTypes";
+
+    onChange(optionFromMenu) {
+      this.filterByType = optionFromMenu;
+    }
 
 }

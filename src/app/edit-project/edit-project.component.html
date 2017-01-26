@@ -25,11 +25,12 @@
 <br>
 
 <label>Type: </label>
-<input [(ngModel)]="selectedProject.type">
-<br>
-
-<button (click)="beginUpdatingThisProject(selectedProject)">Update</button>
-
+<select #newType [(ngModel)]="selectedProject.type">
+  <option value="project" selected="selected">Project</option>
+  <option value="product">Product</option>
+  <option value="charity">Charity</option>
+</select>
 <hr>
+<button (click)="beginUpdatingThisProject(selectedProject)">Update</button>
 
 <button (click)="beginDeletingProject(selectedProject)">Delete</button>

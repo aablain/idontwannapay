@@ -1,7 +1,13 @@
 <h2>Projects</h2>
 
+<select (change)="onChange($event.target.value)">
+  <option value="allTypes" selected="selected">All Projects</option>
+  <option value="project">Project</option>
+  <option value="product">Product</option>
+  <option value="charity">Charity</option>
+</select>
 
-<div *ngFor="let project of projects | async"  class="panel panel-default">
+<div *ngFor="let project of projects | async | type:filterByType"  class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(project)"><em>{{project.name}}</em> by {{project.manager}}</h3>
       <div *ngIf="currentRoute === '/admin'">
