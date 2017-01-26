@@ -13,11 +13,11 @@ export class ProjectService {
     getProjects() {
       return this.projects;
     }
-    //
-    // addAlbum(newAlbum: Album) {
-    //   this.albums.push(newAlbum);
-    // }
-    //
+
+    addProject(newProject: Project) {
+      this.projects.push(newProject);
+    }
+
     getProjectById(projectId: string){
       return this.angularFire.database.object('/projects/' + projectId);// firebase is searching for us
     }
