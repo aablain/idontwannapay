@@ -22,18 +22,22 @@ export class ProjectService {
       return this.angularFire.database.object('/projects/' + projectId);// firebase is searching for us
     }
 
-    // updateAlbum(localUpdatedAlbum){
-    //   var albumEntryInFirebase = this.getAlbumById(localUpdatedAlbum.$key);// finds album by id
-    //   albumEntryInFirebase.update({//updating album.value
-    //     title: localUpdatedAlbum.title,
-    //     artist: localUpdatedAlbum.artist,
-    //     description: localUpdatedAlbum.description});
-    // }
-    //
-    // deleteAlbum(localAlbumToDelete){
-    //   var albumEntryInFirebase = this.getAlbumById(localAlbumToDelete.$key);
-    //   albumEntryInFirebase.remove();
-    // }
+    updateProject(localUpdatedProject){
+      var albumEntryInFirebase = this.getProjectById(localUpdatedProject.$key);// finds album by id
+      albumEntryInFirebase.update({//updating album.value
+        name: localUpdatedProject.name,
+        details: localUpdatedProject.details,
+        manager: localUpdatedProject.manager,
+        goal: localUpdatedProject.goal,
+        moneyraised: localUpdatedProject.moneyraised,
+        reward: localUpdatedProject.reward,
+        type: localUpdatedProject.type});
+    }
+
+    deleteProject(localProjectToDelete){
+      var albumEntryInFirebase = this.getProjectById(localProjectToDelete.$key);
+      albumEntryInFirebase.remove();
+    }
 
 
   }
