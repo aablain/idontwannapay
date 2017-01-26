@@ -1,8 +1,39 @@
 import { Injectable } from '@angular/core';
+import { Project } from './project.model';
+import { AngularFire, FirebaseListObservable } from 'angularfire2'
 
 @Injectable()
 export class ProjectService {
+  projects: FirebaseListObservable<any[]>;
 
-  constructor() { }
+  constructor(private angularFire: AngularFire) {
+    this.projects = angularFire.database.list('projects');
+  }
 
-}
+    getProjects() {
+      return this.projects;
+    }
+    //
+    // addAlbum(newAlbum: Album) {
+    //   this.albums.push(newAlbum);
+    // }
+    //
+    getProjectById(projectId: string){
+      return this.angularFire.database.object('/projects/' + projectId);// firebase is searching for us
+    }
+
+    // updateAlbum(localUpdatedAlbum){
+    //   var albumEntryInFirebase = this.getAlbumById(localUpdatedAlbum.$key);// finds album by id
+    //   albumEntryInFirebase.update({//updating album.value
+    //     title: localUpdatedAlbum.title,
+    //     artist: localUpdatedAlbum.artist,
+    //     description: localUpdatedAlbum.description});
+    // }
+    //
+    // deleteAlbum(localAlbumToDelete){
+    //   var albumEntryInFirebase = this.getAlbumById(localAlbumToDelete.$key);
+    //   albumEntryInFirebase.remove();
+    // }
+
+
+  }

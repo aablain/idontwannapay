@@ -3,7 +3,7 @@
 
 <div *ngFor="let project of projects | async"  class="panel panel-default">
   <div class="panel-body">
-    <h3><em>{{project.title}}</em> by {{project.manager}}</h3>
+    <h3 (click)="goToDetailPage(project)"><em>{{project.name}}</em> by {{project.manager}}</h3>
 
   </div>
 </div>
