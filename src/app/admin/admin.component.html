@@ -43,7 +43,12 @@
       <div>
         <label>Type:</label>
         <br>
-        <input #newType>
+        <select #newType>
+          <option value="project" selected="selected">Project</option>
+          <option value="product">Product</option>
+          <option value="charity">Charity</option>
+        </select>
+        <!-- <input #newType> -->
       </div>
 
       <button (click)="submitForm(newName.value, newDetails.value, newManager.value, newGoal.value, newMoneyRaised.value, newReward.value, newType.value); newName.value=''; newDetails.value=''; newManager.value=''; newGoal.value=''; newReward.value=''; ">Add</button>
