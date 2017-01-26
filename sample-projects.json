@@ -1,0 +1,27 @@
+
+{ "projects": [{
+    "name": "Bibliotheca",
+    "details": "New way to read the bible in a traditional letter story format",
+    "manager": "Jacob Combs",
+    "goal": "9000",
+    "moneyraised": "4500",
+    "reward": "free copy of book collection",
+    "type": "product"
+    }, {
+    "name": "Tower Defense",
+    "details": "Sweet Game Bro",
+    "manager": "Joshua R",
+    "goal": "10000",
+    "moneyraised": "0",
+    "reward": "feeling good about yourself",
+    "type": "project"
+    }, {
+    "name": "Mission Trip",
+    "details": "Building homes for families in Mexico",
+    "manager": "Austin B",
+    "goal": "1400",
+    "moneyraised": "57",
+    "reward": "food poisoning",
+    "type": "charity"
+  }]
+}
