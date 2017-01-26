@@ -1,0 +1,9 @@
+
+
+
+<h4>Amount Currently Funded: ${{selectedProject.moneyraised}}</h4>
+<!-- <input [(ngModel)]="selectedProject.moneyraised"> -->
+<input #amountInputed type="number">
+<br>
+
+<button (click)="fundThisAmount(selectedProject, amountInputed.value)">Fund</button>

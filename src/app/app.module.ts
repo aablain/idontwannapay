@@ -14,6 +14,7 @@ import { AngularFireModule } from 'angularfire2';
 import { EditProjectComponent } from './edit-project/edit-project.component';
 import { TypePipe } from './type.pipe';
 import { SearchPipe } from './search.pipe';
+import { FundComponent } from './fund/fund.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -31,7 +32,8 @@ export const firebaseConfig = {
     AdminComponent,
     EditProjectComponent,
     TypePipe,
-    SearchPipe
+    SearchPipe,
+    FundComponent
   ],
   imports: [
     BrowserModule,

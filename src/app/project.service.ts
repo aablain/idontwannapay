@@ -34,6 +34,19 @@ export class ProjectService {
         type: localUpdatedProject.type});
     }
 
+    fundProject(localUpdatedProject, amountInputed){
+      var albumEntryInFirebase = this.getProjectById(localUpdatedProject.$key);// finds album by id
+      localUpdatedProject.moneyraised = parseInt(localUpdatedProject.moneyraised) + parseInt(amountInputed);
+      albumEntryInFirebase.update({//updating album.value
+        name: localUpdatedProject.name,
+        details: localUpdatedProject.details,
+        manager: localUpdatedProject.manager,
+        goal: localUpdatedProject.goal,
+        moneyraised: localUpdatedProject.moneyraised,
+        reward: localUpdatedProject.reward,
+        type: localUpdatedProject.type});
+    }
+
     deleteProject(localProjectToDelete){
       var albumEntryInFirebase = this.getProjectById(localProjectToDelete.$key);
       albumEntryInFirebase.remove();

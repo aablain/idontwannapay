@@ -12,9 +12,16 @@
 <div *ngFor="let project of projects | async | type:filterByType | search:term"  class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(project)"><em>{{project.name}}</em> by {{project.manager}}</h3>
+    <div class="">
+      <h4>Goal: ${{project.goal}}</h4>
+    </div>
       <div *ngIf="currentRoute === '/admin'">
           <hr>
           <app-edit-project [selectedProject]="project"></app-edit-project>
+      </div>
+
+      <div *ngIf="currentRoute !== '/admin'">
+        <app-fund [selectedProject]="project"></app-fund>
       </div>
 
   </div>

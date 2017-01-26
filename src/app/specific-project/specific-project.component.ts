@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Project } from './../project.model';
@@ -14,6 +14,7 @@ import { FirebaseObjectObservable } from 'angularfire2';
 export class SpecificProjectComponent implements OnInit {
     projectId: string;
     projectToDisplay: FirebaseObjectObservable<Project>;
+    @Input() selectedProject;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,6 +27,10 @@ export class SpecificProjectComponent implements OnInit {
       this.projectId = urlParametersArray['itsKey'];
     });
     this.projectToDisplay = this.projectService.getProjectById(this.projectId);
+  }
+
+  beginUpdatingThisProject(projectToBeChanged){
+    this.projectService.updateProject(projectToBeChanged);
   }
 
 }
