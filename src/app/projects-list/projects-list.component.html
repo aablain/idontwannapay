@@ -7,7 +7,9 @@
   <option value="charity">Charity</option>
 </select>
 
-<div *ngFor="let project of projects | async | type:filterByType"  class="panel panel-default">
+<input [(ngModel)]="term" placeholder="Search by Name or Author">
+
+<div *ngFor="let project of projects | async | type:filterByType | search:term"  class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(project)"><em>{{project.name}}</em> by {{project.manager}}</h3>
       <div *ngIf="currentRoute === '/admin'">

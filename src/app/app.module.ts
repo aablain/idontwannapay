@@ -13,6 +13,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { EditProjectComponent } from './edit-project/edit-project.component';
 import { TypePipe } from './type.pipe';
+import { SearchPipe } from './search.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     SpecificProjectComponent,
     AdminComponent,
     EditProjectComponent,
-    TypePipe
+    TypePipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
