@@ -1,36 +1,53 @@
+<div class="card">
 <h4>Edit Project:</h4>
 
+<div>
 <label>Name: </label>
 <input [(ngModel)]="selectedProject.name">
-<br>
 
+</div>
+
+<div>
 <label>Details: </label>
 <input [(ngModel)]="selectedProject.manager">
-<br>
 
+</div>
+
+<div>
 <label>Manager: </label>
 <input [(ngModel)]="selectedProject.details">
-<br>
 
+</div>
+
+<div>
 <label>Goal: </label>
 <input [(ngModel)]="selectedProject.goal">
-<br>
 
+</div>
+
+<div>
 <label>Money Currently Raised: </label>
 <input [(ngModel)]="selectedProject.moneyraised">
-<br>
 
+</div>
+
+<div>
 <label>Perks of helping: </label>
 <input [(ngModel)]="selectedProject.reward">
-<br>
 
+</div>
+
+<div>
 <label>Type: </label>
 <select #newType [(ngModel)]="selectedProject.type">
   <option value="project" selected="selected">Project</option>
   <option value="product">Product</option>
   <option value="charity">Charity</option>
 </select>
-<hr>
+</div>
+<div>
 <button (click)="beginUpdatingThisProject(selectedProject)">Update</button>
 
 <button (click)="beginDeletingProject(selectedProject)">Delete</button>
+</div>
+</div>

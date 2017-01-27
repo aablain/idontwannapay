@@ -1,10 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
-
 .footer {
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 60px;
   background-color: #f5f5f5;
-  padding: 15px;
-}
+  padding: 15px; }
+
+button {
+  background-color: #F5B041;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 14px;
+  font-weight: bolder !important;
+  color: #fff !important; }
+  button:hover {
+    background-color: #f8c471;
+    color: #111 !important; }
+
+body {
+  background-color: #212F3D !important; }
+  body h2 {
+    color: #fff; }
+  body h3 {
+    color: #F5B041 !important; }
+  body input {
+    padding: 5px;
+    width: 150px;
+    border-radius: 3px;
+    margin: 5px; }
+
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .card > h4 {
+    width: 100%;
+    text-align: left; }
+  .card > div {
+    width: 51%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+  .card > div:last-of-type {
+    justify-content: center; }
+    .card > div:last-of-type button {
+      margin-right: 5px; }
+    .card > div:last-of-type button:last-of-type {
+      background-color: #E74C3C; }
+      .card > div:last-of-type button:last-of-type:hover {
+        background-color: #ed7669; }
+
+.searchPlace {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between; }
+  .searchPlace select {
+    margin: 5px; }
+  .searchPlace .searchBar {
+    width: 250px !important; }
+
+.specificProject {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  padding-right: 50px; }
+  .specificProject > h3, .specificProject > h4, .specificProject > p {
+    margin: 50px !important; }
+
+/*# sourceMappingURL=styles.css.map */
